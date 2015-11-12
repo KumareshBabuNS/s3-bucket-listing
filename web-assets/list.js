@@ -25,7 +25,7 @@ jQuery(function($) {
 function getS3Data(marker, html) {
   var s3_rest_url = createS3QueryUrl(marker);
   // set loading notice
-  $('#listing').html('<img src="//assets.okfn.org/images/icons/ajaxload-circle.gif" />');
+  $('#listing').html('<img src="web-assets/ajaxload-circle.gif" />');
   $.get(s3_rest_url)
     .done(function(data) {
       // clear loading notice
@@ -124,7 +124,7 @@ function getInfoFromS3Data(xml) {
 //    files: ..
 //    directories: ..
 //    prefix: ...
-// } 
+// }
 function prepareTable(info) {
   var files = info.files.concat(info.directories)
     , prefix = info.prefix
